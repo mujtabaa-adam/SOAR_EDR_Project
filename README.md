@@ -2,11 +2,12 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Project Setup](#project-setup)
+2. [Workflow](#workflow)
+3. [Project Setup](#project-setup)
 4. [Conclusion](#conclusion)
 
 ## Introduction
-This project provides hands-on experience with Security Orchestration, Automation, and Response (SOAR) and Endpoint Detection and Response (EDR) by integrating Lima Charlie and Tines. The goal is to create a detection and response workflow that can automatically identify threats, send alerts via Slack and email, and provide an option to isolate compromised machines.
+This project provides hands-on experience with Security Orchestration, Automation, and Response (SOAR) and Endpoint Detection and Response (EDR) by integrating Lima Charlie and Tines. [LimaCharlie](https://limacharlie.io/) is a Security Operations (SecOps) Cloud Platform that provides Endpoint Detection and Response (EDR), log collection, automation, and custom threat detection capabilities. [Tines](https://www.tines.com/) is a Security Orchestration, Automation, and Response (SOAR) platform that allows security teams to automate workflows without writing code. The goal is to create a detection and response workflow that can automatically identify threats, send alerts via Slack and email, and provide an option to isolate compromised machines.
 
 
 ## Workflow
@@ -22,10 +23,10 @@ This project provides hands-on experience with Security Orchestration, Automatio
      
 
 
-### Installation
+### Project-Setup
 - 
 
 
 ## Conclusion
-Overall, honeypots serve as a great tool to analyze trends in malicious activity. Since T-Pot has the ELK Stack integrated into it, all of the data aggregated through various honeypots could easily be displayed using dashboards, which is what Kibana excels at. 
+
 
