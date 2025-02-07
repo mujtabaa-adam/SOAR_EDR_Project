@@ -19,12 +19,15 @@ This project provides hands-on experience with Security Orchestration, Automatio
 ### 3. User Decision & Response
    - The user will be prompted to either isolate the machine or not. If yes, LimaCharlie will automatically isolate the machine. If no, an alert will be sent to Slack.
 ### 4. Status Update
-   - If isolation is successful/unsuccessful, Slack will receive the respective status update.
+   - If isolation is successful/unsuccessful, Slack will receive the respective status update. Here's the workflow diagram: <br><p align="center"><img src="/images/SOAR Diagram.jpg" width=400 height=400></p>
      
 
 
-### Project-Setup
-- 
+## Project-Setup
+- Windows Server:
+   - For this lab, a Windows Server is necessary, as that's where our data will come from. I created a VM instance of the Windows Server 2025 version, though past versions should work just fine. Do note that you could also create a VM on the cloud using a cloud provider. 
+- LimaCharlie:
+   - Once you have configured the Windows Server, you'd need to create an account on LimaCharlie. After creating an account, head over to <b>Organization</b> and select a <b>Data Residency Region</b>. Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b><br><img src=>
 
 
 ## Conclusion
