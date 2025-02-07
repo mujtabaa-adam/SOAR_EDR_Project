@@ -28,7 +28,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - For this lab, a Windows Server is necessary, as that's where our data will come from. I created a VM instance of the Windows Server 2025 version, though past versions should work just fine. Do note that you could also create a VM on the cloud using a cloud provider. 
 - LimaCharlie:
    - Once you have configured the Windows Server, you'd need to create an account on LimaCharlie. After creating an account, head over to <b>Organization</b> and select a <b>Data Residency Region</b>.<br><p align="center"><img src="/images/limacharlie_org.png" width=500 height=400></p><br>
-   - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b><br><p align="center"><img src="/images/create_installation_key.png" width=500 height=300></p><br>
+   - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b>. Feel free to name it whatever.<br><p align="center"><img src="/images/create_installation_key.png" width=500 height=300></p><br>
 
 
 ## Conclusion
