@@ -29,6 +29,10 @@ This project provides hands-on experience with Security Orchestration, Automatio
 - LimaCharlie:
    - Once you have configured the Windows Server, you'd need to create an account on LimaCharlie. After creating an account, head over to <b>Organization</b> and select a <b>Data Residency Region</b>.<br><p align="center"><img src="/images/limacharlie_org.png" width=500 height=400></p><br>
    - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b>. Feel free to name it whatever.<br><p align="center"><img src="/images/create_installation_key.png" width=500 height=300></p><br>
+- Post-LimaCharlie:
+   - Once you've logged into LimaCharlie, you should see something like this:<br><p align="center"><img src="images/limacharlie_default.png" width=500 height=300></p><br>
+   - Before moving on, let's explore what LimaCharlie has to offer. On the right-hand side, you have options such as `Detections`, `Automation`, etc.<br><p align="center"><img src="images/limacharlie_home.png" width=500 height=300></p><br>
+                                                                                                                                                                         
 
 
 ## Conclusion
