@@ -41,7 +41,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - After downloading LaZagne, run it using the following command:<br>`.\lazagne.exe all`<br>
    - LimaCharlie will now detect the execution of LaZagne.
    - Now we're going to create a <b>Detection & Response Rule</b>, which can be done by going to <b>LimaCharlie > Automation > D&R Rules</b>.<br><p align="center"><img src="images/original_rules.png"></p><br>
-   - 
+   - Copy and paste the text from ![D&R Rule](https://github.com/mujtabaa-adam/SOAR_EDR_Project/blob/main/D%26R%20Rule) on to the respective sections.<br><p align="center"><img src="images/limacharlie_dr.png"></p><br>
                                                                                     
 
 
