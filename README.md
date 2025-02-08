@@ -35,7 +35,13 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - By now, you should have generated an <b>Installation Key</b>. When you scroll below on the <b>Installation Keys</b> page, you should see a list of sensor downloads for various operating systems. We're interested in an EDR sensor for Windows 64-bit, or to your respective version. <b>NOTE:</b>Make sure to copy the link of your respective EDR-sensor download and paste that in your Windows Server browser, which will download the actual agent.<br><p align="center"><img src="images/limacharlie_edr.png"></p><br>
    - Once you've downloaded the agent onto your Windows Server, run the following command: <br>`cd Downloads`<br>`.\(file name).exe -i (YOUR_INSTALLATION_KEY)`<br>
    - Verify the agent is running in <b>LimaCharlie > Sensors List</b>. Here's my sensor (middle one):<br><p align="center"><img src="images/limacharlie_sensors.png"></p><br>
-                                                                                                                                                                         
+   - When you click on the sensor, you'll be brought to a page where it lists information about the sensor, such as Hostname, Platform, etc. On the left, you'll see a list of features.<br><p align="center"><img src="images/limacharlie_features.png"></p><br>.
+   - From this point, we'll start testing out certain features that LimaCharlie is known for, such as detecting suspicious activities based on given rules and performing automation to deal with threats.
+   - Download ![LaZagne](https://github.com/AlessandroZ/LaZagne) on your server. We'll be using this tool to test LimaCharlie.
+   - After downloading LaZagne, run it using the following command:<br>`.\lazagne.exe all`<br>
+   - LimaCharlie will now detect the execution of LaZagne.
+   - 
+                                                                                    
 
 
 ## Conclusion
