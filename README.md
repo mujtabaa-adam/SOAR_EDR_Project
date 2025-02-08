@@ -28,7 +28,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - For this lab, a Windows Server is necessary, as that's where our data will come from. I created a VM instance of the Windows Server 2025 version, though past versions should work just fine. Do note that you could also create a VM on the cloud using a cloud provider. 
 - LimaCharlie:
    - Once you have configured the Windows Server, you'd need to create an account on LimaCharlie. After creating an account, head over to <b>Organization</b> and select a <b>Data Residency Region</b>.<br><p align="center"><img src="/images/limacharlie_org.png" width=500 height=400></p><br>
-   - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b>. Feel free to name it whatever.<br><p align="center"><img src="/images/create_installation_key.png" width=500 height=300></p><br>
+   - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b>. Feel free to name it whatever.<br><p align="center"><img src="/images/create_installation_key.png"></p><br>
 - Post-LimaCharlie:
    - Once you've logged into LimaCharlie, you should see something like this:<br><p align="center"><img src="images/limacharlie_default.png" width=500 height=300></p><br>
    - Before moving on, let's explore what LimaCharlie has to offer. On the right-hand side, you have options such as `Detections`, `Automation`, etc.<br><p align="center"><img src="images/limacharlie_home.png" width=200 height=700></p><br>
@@ -40,6 +40,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - Download ![LaZagne](https://github.com/AlessandroZ/LaZagne) on your server. We'll be using this tool to test LimaCharlie.
    - After downloading LaZagne, run it using the following command:<br>`.\lazagne.exe all`<br>
    - LimaCharlie will now detect the execution of LaZagne.
+   - Now we're going to create a <b>Detection & Response Rule</b>, which can be done by going to <b>LimaCharlie > Automation > D&R Rules</b>.<br><p align="center"><img src="images/original_rules.png"></p><br>
    - 
                                                                                     
 
