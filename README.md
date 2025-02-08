@@ -19,7 +19,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
 ### 3. User Decision & Response
    - The user will be prompted to either isolate the machine or not. If yes, LimaCharlie will automatically isolate the machine. If no, an alert will be sent to Slack.
 ### 4. Status Update
-   - If isolation is successful/unsuccessful, Slack will receive the respective status update. Here's the workflow diagram: <br><p align="center"><img src="/images/SOAR Diagram.jpg" width=400 height=400></p>
+   - If isolation is successful/unsuccessful, Slack will receive the respective status update. Here's the workflow diagram: <br><p align="center"><img src="/images/SOAR Diagram.jpg" width=600 height=600></p>
      
 
 
@@ -34,7 +34,7 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - Before moving on, let's explore what LimaCharlie has to offer. On the right-hand side, you have options such as `Detections`, `Automation`, etc.<br><p align="center"><img src="images/limacharlie_home.png" width=200 height=700></p><br>
    - By now, you should have generated an <b>Installation Key</b>. When you scroll below on the <b>Installation Keys</b> page, you should see a list of sensor downloads for various operating systems. We're interested in an EDR sensor for Windows 64-bit, or to your respective version. <b>NOTE:</b>Make sure to copy the link of your respective EDR-sensor download and paste that in your Windows Server browser, which will download the actual agent.<br><p align="center"><img src="images/limacharlie_edr.png"></p><br>
    - Once you've downloaded the agent onto your Windows Server, run the following command: <br>`cd Downloads`<br>`.\(file name).exe -i (YOUR_INSTALLATION_KEY)`<br>
-   - Verify the agent is running in <b>LimaCharlie > Sensors List</b>.
+   - Verify the agent is running in <b>LimaCharlie > Sensors List</b>. Here's my sensor (middle one):<br><p align="center"><img src="images/limacharlie_sensors.png"></p><br>
                                                                                                                                                                          
 
 
