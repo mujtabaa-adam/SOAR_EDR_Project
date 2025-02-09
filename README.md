@@ -1,34 +1,54 @@
 # SOAR-EDR: Automating Threat Detection & Response
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Workflow](#workflow)
-3. [Project Setup](#project-setup)
-4. [Conclusion](#conclusion)
+
+- [Introduction](#introduction)
+- [Workflow](#workflow)
+- [Project Setup](#project-setup)
+- [Conclusion](#conclusion)
+
+---
 
 ## Introduction
-This project provides hands-on experience with Security Orchestration, Automation, and Response (SOAR) and Endpoint Detection and Response (EDR) by integrating Lima Charlie and Tines. [LimaCharlie](https://limacharlie.io/) is a Security Operations (SecOps) Cloud Platform that provides Endpoint Detection and Response (EDR), log collection, automation, and custom threat detection capabilities. [Tines](https://www.tines.com/) is a Security Orchestration, Automation, and Response (SOAR) platform that allows security teams to automate workflows without writing code. The goal is to create a detection and response workflow that can automatically identify threats, send alerts via Slack and email, and provide an option to isolate compromised machines.
+
+The **SOAR-EDR** project provides hands-on experience with integrating Security Orchestration, Automation, and Response (SOAR) with Endpoint Detection and Response (EDR) systems. This is achieved by combining **LimaCharlie** and **Tines**.
+
+- ![LimaCharlie](https://limacharlie.io/) is a cloud-based platform offering Security Operations (SecOps) tools such as EDR, log collection, automation, and custom threat detection capabilities.
+- ![Tines](https://www.tines.com/) is a SOAR platform designed to automate security workflows without the need for coding.
+
+The goal of this project is to create an automated detection and response workflow that:
+1. Detects threats
+2. Sends alerts via Slack and email
+3. Provides an option to isolate compromised machines
 
 
 ## Workflow
 ### 1. Threat Detection
    - Lima Charlie detects suspicious activity.
-   - Detection is forwarded to Tines for further processing.
+   - The detected event is forwarded to Tines for further processing.
 ### 2. Alert
    - Tines sends an alert to Slack and email, containing: <br>`Timestamp`<br>`Computer Name`<br>`Source IP`<br>`Process Command Line`<br>`File Path`<br>`Sensor ID`<br>`Detection Link (if application)`
 ### 3. User Decision & Response
-   - The user will be prompted to either isolate the machine or not. If yes, LimaCharlie will automatically isolate the machine. If no, an alert will be sent to Slack.
+   - The user will be prompted to either isolate the machine or not.
+        - If **yes**, LimaCharlie will automatically isolate the machine.
+        - If **no**, an alert will be sent to Slack.
 ### 4. Status Update
-   - If isolation is successful/unsuccessful, Slack will receive the respective status update. Here's the workflow diagram: <br><p align="center"><img src="/images/SOAR Diagram.jpg" width=600 height=600></p>
+   - If isolation is successful/unsuccessful, a status update will be sent to Slack. Here's the workflow diagram: <br><p align="center"><img src="/images/SOAR Diagram.jpg" width=600 height=600></p>
      
 
 
 ## Project-Setup
-- Windows Server:
-   - For this lab, a Windows Server is necessary, as that's where our data will come from. I created a VM instance of the Windows Server 2025 version, though past versions should work just fine. Do note that you could also create a VM on the cloud using a cloud provider. 
-- LimaCharlie:
-   - Once you have configured the Windows Server, you'd need to create an account on LimaCharlie. After creating an account, head over to <b>Organization</b> and select a <b>Data Residency Region</b>.<br><p align="center"><img src="/images/limacharlie_org.png" width=500 height=400></p><br>
-   - Don't forget to generate an <b>installation key</b> under <b>Sensors > Installation Keys</b>. Feel free to name it whatever.<br><p align="center"><img src="/images/create_installation_key.png"></p><br>
+### Windows Server Setup
+
+- For this project, you need a Windows Server instance, which can either be hosted on a local machine or a cloud provider. 
+- A **Windows Server 2025** VM instance is recommended, but previous versions will also work.
+  
+### LimaCharlie Configuration
+1. **Account Creation**: 
+   - Sign up for a **LimaCharlie** account.
+   - Once logged in, create an <b>Organization</b> and select a <b>Data Residency Region</b>.<br><p align="center"><img src="/images/limacharlie_org.png" width=500 height=400></p><br>
+2. **Generate Installation Key**: 
+   - Navigate to **Sensors > Installation Keys** to generate an installation key. You can name it as you see fit.<br><p align="center"><img src="/images/create_installation_key.png"></p><br>
 - Post-LimaCharlie:
    - Once you've logged into LimaCharlie, you should see something like this:<br><p align="center"><img src="images/limacharlie_default.png" width=500 height=300></p><br>
    - Before moving on, let's explore what LimaCharlie has to offer. On the right-hand side, you have options such as `Detections`, `Automation`, etc.<br><p align="center"><img src="images/limacharlie_home.png" width=200 height=700></p><br>
