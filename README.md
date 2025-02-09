@@ -42,6 +42,13 @@ This project provides hands-on experience with Security Orchestration, Automatio
    - LimaCharlie will now detect the execution of LaZagne.
    - Now we're going to create a <b>Detection & Response Rule</b>, which can be done by going to <b>LimaCharlie > Automation > D&R Rules</b>.<br><p align="center"><img src="images/original_rules.png"></p><br>
    - Copy and paste the text from ![D&R Rule](https://github.com/mujtabaa-adam/SOAR_EDR_Project/blob/main/D%26R%20Rule) on to the respective sections.<br><p align="center"><img src="images/limacharlie_dr.png"></p><br>
+   - To test the rule, simply scroll down and click `Target Event`. Here, we'll simply paste an event, which we will now find.<br><p align="center"><img src="images/limacharlie_testev.png"></p><br>
+   - To find the event, make sure you've run LaZagne, as that'll generate an event in LimaCharlie. To find it, head to <b>Sensor > Timelime</b>. It'll look like this:<br><p align="center"><img src="images/limacharlie_timeline.png"></p><br>
+   - Searching for LaZagne will give us this:<br><p align="center"><img src="images/limacharlie_timeline2.png"></p><br>
+   - Click on any of the events that mention <b>NEW_PROCESS</b> and copy that event. Head back to `Target Event` to test our rule. Once you paste it in and click `Test Event`, it'll show this:<br><p align="center"><img src="images/rule_match.png"></p><br>
+   - This indicates that our rule works without any errors. Make sure to save the rule. At this point, LimaCharlie will be able to detect any events that trigger our rule and it'll display that in the `Detections` tab. Here's what it'll look like if you run LaZagne again:<br><p align="center"><img src="images/limacharlie_detections.png"></p><br>
+   - Clicking on one of the detections will give you a bunch of information such as the `Hash, PROCESS_ID, and more`. With this information, we could perform investigations regarding any malicious activity on our systems, as well as perform automated actions based on such activity.
+
                                                                                     
 
 
