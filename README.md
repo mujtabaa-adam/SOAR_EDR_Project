@@ -52,17 +52,17 @@ The goal of this project is to create an automated detection and response workfl
 3. **Sensor Installation**: 
    - Once you've logged into LimaCharlie, you should see something like this:<br><p align="center"><img src="images/limacharlie_default.png" width=500 height=300></p><br>
    - Before moving on, let's explore what LimaCharlie has to offer. On the right-hand side, you have options such as `Detections`, `Automation`, etc.<br><p align="center"><img src="images/limacharlie_home.png" width=200 height=700></p><br>
-   - By now, you should have generated an <b>Installation Key</b>. When you scroll below on the <b>Installation Keys</b> page, you should see a list of sensor downloads for various operating systems. We're interested in an EDR sensor for Windows 64-bit, or to your respective version. <b>NOTE:</b>Make sure to copy the link of your respective EDR-sensor download and paste that in your Windows Server browser, which will download the actual agent.<br><p align="center"><img src="images/limacharlie_edr.png"></p><br>
+   - By now, you should have generated an <b>Installation Key</b>. When you scroll below on the <b>Installation Keys</b> page, you should see a list of sensor downloads for various operating systems. We're interested in an EDR sensor for Windows 64-bit, or to your respective version. <b>NOTE:</b>Make sure to copy the link of your respective EDR-sensor download and paste that into your Windows Server browser, which will download the actual agent.<br><p align="center"><img src="images/limacharlie_edr.png"></p><br>
 4. **Run Installation Command**:
    - Once you've downloaded the agent onto your Windows Server, run the following command: <br>`cd Downloads`<br>`.\(file name).exe -i (YOUR_INSTALLATION_KEY)`<br>
    - Verify the agent is running in <b>LimaCharlie > Sensors List</b>. Here's my sensor (middle one):<br><p align="center"><img src="images/limacharlie_sensors.png"></p><br>
-   - When you click on the sensor, you'll be brought to a page where it lists information about the sensor, such as Hostname, Platform, etc. On the left, you'll see a list of features.<br><p align="center"><img src="images/limacharlie_features.png"></p><br>.
+   - When you click on the sensor, you'll be brought to a page that lists information about the sensor, such as hostname, platform, etc. On the left, you'll see a list of features.<br><p align="center"><img src="images/limacharlie_features.png"></p><br>.
    - From this point, we'll start testing out certain features that LimaCharlie is known for, such as detecting suspicious activities based on given rules and performing automation to deal with threats.
 
 ### Testing LimaCharlie's Features
 1. **Detecting Suspicious Activity**: 
    - Download ![LaZagne](https://github.com/AlessandroZ/LaZagne) (a tool used for password recovery) on your server. We'll be using this tool to test LimaCharlie. Use the following command to run it.<br>`.\lazagne.exe all`<br>
-   - LimaCharlie will detect the execution of LaZagne.
+   - LimaCharlie will detect LaZagne's execution.
 2. **Creating Detection & Response (D&R) Rule**:
    - Now we're going to create a <b>Detection & Response Rule</b>, which can be done by going to <b>LimaCharlie > Automation > D&R Rules</b>.<br><p align="center"><img src="images/original_rules.png"></p><br>
    - Copy and paste the text from ![D&R Rule](https://github.com/mujtabaa-adam/SOAR_EDR_Project/blob/main/D%26R%20Rule) on to the respective sections.<br><p align="center"><img src="images/limacharlie_dr.png"></p><br>
@@ -79,6 +79,11 @@ The goal of this project is to create an automated detection and response workfl
      - Additional metadata that will assist in investigating malicious activity.
 7. **Automated Actions**: 
    - Based on the detected events, you can configure LimaCharlie to perform automated actions, such as isolating the machine.
+
+### Slack and Tines
+1. Create an account on Slack and Tines. Make sure to create a channel called `#alerts` on Slack.
+2. On LimaCharlie, head into `Outputs > Add Output > Detections > Tines > Enter a name and paste in the Destination Host URL, which you can easily get by configuring Tines. Make sure to save the output.
+3. Now we're going to test by simply running LaZagne again. Back on the Outputs page, you should see something like this:
                                                                                     
 
 
