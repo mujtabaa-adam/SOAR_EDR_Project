@@ -82,8 +82,9 @@ The goal of this project is to create an automated detection and response workfl
 
 ### Slack and Tines
 1. Create an account on Slack and Tines. Make sure to create a channel called `#alerts` on Slack.
-2. On LimaCharlie, head into `Outputs > Add Output > Detections > Tines > Enter a name and paste in the Destination Host URL, which you can easily get by configuring Tines. Make sure to save the output.
-3. Now we're going to test by simply running LaZagne again. Back on the Outputs page, you should see something like this:
+2. On LimaCharlie, head into `Outputs > Add Output > Detections > Tines > Enter a name and paste in the Destination Host URL, which you can easily get by configuring Tines. Make sure to save the output.<br><p align="center"><img src="images/link_detections.png"></p><br><p align="center"><img src="images/link_tines.png"></p><br>
+4. Now we're going to test by simply running LaZagne again. Back on the Outputs page, you should see something like this:<br><p align="center"><img src="images/limacharlie_outputs.png"></p><br>
+5. 
                                                                                     
 
 
