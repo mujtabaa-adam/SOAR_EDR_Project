@@ -80,14 +80,34 @@ The goal of this project is to create an automated detection and response workfl
 7. **Automated Actions**: 
    - Based on the detected events, you can configure LimaCharlie to perform automated actions, such as isolating the machine.
 
-### Slack and Tines
-1. Create an account on Slack and Tines. Make sure to create a channel called `#alerts` on Slack.
-2. To configure Tines, firstly create a new story > Delete all of the default elements > create a webhook > give it a name > copy the Webhook URL.
-3. On LimaCharlie, head into `Outputs > Add Output > Detections > Tines > Enter a name and paste in the webhook URL that you got after following the previous steps. Make sure to save the output.<br><p align="center"><img src="images/link_detections.png"></p><br><p align="center"><img src="images/link_tines.png"></p><br>
-4. Now we're going to test by simply running LaZagne again. Back on the Outputs page, you should see something like this:<br><p align="center"><img src="images/limacharlie_outputs.png"></p><br>
-5. Click on "View Samples" and it'll show you the actual detection. Head to Tines and click on your Webhook > Events, you'll see that Tines has received the detection. This indicates that we have properly linked LimaCharlie with Tines. 
-                                                                                    
+### Slack and Tines Integration
 
+Follow these steps to integrate Slack and Tines with LimaCharlie for automated threat detection alerts:
+
+1. **Create Accounts & Slack Channel**
+   - Sign up for **Slack** and **Tines** if you haven’t already.
+   - In Slack, create a channel named `#alerts` to receive security notifications.
+
+2. **Configure Tines**
+   - Create a new **Story** in Tines.
+   - Delete all default elements.
+   - Add a **Webhook** and name it appropriately.
+   - Copy the **Webhook URL** generated.
+
+3. **Integrate LimaCharlie with Tines**
+   - In LimaCharlie, navigate to `Outputs > Add Output > Detections`.
+   - Select **Tines** as the output type.
+   - Enter a name and paste the **Webhook URL** from the previous step.
+   - Save the output configuration.<br><p align="center"><img src="images/link_detections.png"></p><br><p align="center"><img src="images/link_tines.png"></p><br>
+   
+4. **Testing the Integration**
+   - Run **LaZagne** again to generate a detection.
+   - Go to `Outputs` in LimaCharlie; you should see an entry similar to the one below:br><p align="center"><img src="images/limacharlie_outputs.png"></p><br>
+
+5. **Verify in Tines**
+   - Click **"View Samples"** in LimaCharlie to inspect the detection data.
+   - In Tines, go to your **Webhook > Events** to confirm that the detection has been received.
+   - If the event appears in Tines, the integration is successfully configured.
 
 ## Conclusion
 
