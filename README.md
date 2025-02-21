@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Workflow](#workflow)
+   - [1. Threat Detection](#1-Threat-Detection)
 - [Project Setup](#project-setup)
 - [Conclusion](#conclusion)
 
