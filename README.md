@@ -4,8 +4,31 @@
 
 - [Introduction](#introduction)
 - [Workflow](#workflow)
-   - [1. Threat Detection](#1-Threat-Detection)
+   - [1. Threat Detection](#1-threat-detection)
+   - [2. Alert](#2-alert)
+   - [3. Decision & Response](#3-decision--response)
+   - [4. Status Update](#4-status-update)
 - [Project Setup](#project-setup)
+   - [Windows Server Setup](#windows-server-setup)
+   - [LimaCharlie Configuration](#limacharlie-configuration)
+      - [Account Creation](#account-creation)
+      - [Generate Installation Key](#generate-installation-key)
+    - [Sensor Installation](#sensor-installation)
+    - [Run Installation Command](#run-installation-command)
+  - [Testing LimaCharlie Features](#testing-limacharlie-features)
+    - [Detecting Suspicious Activity](#detecting-suspicious-activity)
+    - [Creating Detection & Response Rule](#creating-detection--response-rule)
+    - [Testing the Rule](#testing-the-rule)
+    - [Event Investigation](#event-investigation)
+    - [Saving the Rule](#saving-the-rule)
+    - [View Detections](#view-detections)
+    - [Automated Actions](#automated-actions)
+- [Slack and Tines Integration](#slack-and-tines-integration)
+  - [Create Accounts & Slack Channel](#create-accounts--slack-channel)
+  - [Configure Tines](#configure-tines)
+  - [Integrate LimaCharlie with Tines](#integrate-limacharlie-with-tines)
+  - [Testing the Integration](#testing-the-integration)
+  - [Verify in Tines](#verify-in-tines)
 - [Conclusion](#conclusion)
 
 ---
@@ -29,7 +52,7 @@ The goal of this project is to create an automated detection and response workfl
    - The detected event is forwarded to Tines for further processing.
 ### 2. Alert
    - Tines sends an alert to Slack and email, containing: <br>`Timestamp`<br>`Computer Name`<br>`Source IP`<br>`Process Command Line`<br>`File Path`<br>`Sensor ID`<br>`Detection Link (if application)`
-### 3. User Decision & Response
+### 3. Decision & Response
    - The user will be prompted to either isolate the machine or not.
         - If **yes**, LimaCharlie will automatically isolate the machine.
         - If **no**, an alert will be sent to Slack.
