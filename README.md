@@ -1,5 +1,3 @@
-# SOAR-EDR: Automating Threat Detection & Response
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -103,12 +101,40 @@ Follow these steps to integrate Slack and Tines with LimaCharlie for automated t
    
 4. **Testing the Integration**
    - Run **LaZagne** again to generate a detection.
-   - Go to `Outputs` in LimaCharlie; you should see an entry similar to the one below:br><p align="center"><img src="images/limacharlie_outputs.png"></p><br>
+   - Go to `Outputs` in LimaCharlie; you should see an entry similar to the one below:<br><p align="center"><img src="images/limacharlie_outputs.png"></p><br>
 
 5. **Verify in Tines**
    - Click **"View Samples"** in LimaCharlie to inspect the detection data.
    - In Tines, go to your **Webhook > Events** to confirm that the detection has been received.
    - If the event appears in Tines, the integration is successfully configured.
+
+### Implementation
+- Currently, our Tines playbook is empty, other than just having the detections webhook. We're going to add Slack to send alerts to the #alerts channel. To do this, simply go to the Templates > Search for Slack > Drag & Drop > Search for "Send a Message" > Paste the following for the Message field: Title - <<detections.body.cat>>
+``Event Time (Epoch) - <<detections.body.detect.routing.event_time>>
+Hostname - <<detections.body.detect.routing.hostname>>
+IP - <<detections.body.detect.routing.int_ip>>
+Username - <<detections.body.detect.event.USER_NAME>>
+File Path - <<detections.body.detect.event.FILE_PATH>>
+Command - <<detections.body.detect.event.COMMAND_LINE>>
+Sensor ID - <<detections.body.detect.routing.sid>>
+Detection Link - <<detections.body.link>>``
+
+- Make sure to copy and paste the #alerts channel ID. Here's what it should look like, as well as the playbook:<br><p align="center"><img src="images/slack_1.png"></p><p align="center"><img src="images/playbook_1.png"></p><br>
+- Now, we need to do the same, but for our email. Drag and drop the Send Email button and paste the following as the message: ``<b>Title</b> - <<detections.body.cat>>
+<br><b>Event Time (Epoch)</b> - <<detections.body.detect.routing.event_time>>
+<br><b>Hostname</b> - <<detections.body.detect.routing.hostname>>
+<br><b>IP</b> - <<detections.body.detect.routing.int_ip>>
+<br><b>Username</b> - <<detections.body.detect.event.USER_NAME>>
+<br><b>File Path</b> - <<detections.body.detect.event.FILE_PATH>>
+<br><b>Command</b> - <<detections.body.detect.event.COMMAND_LINE>>
+<br><b>Sensor ID</b> - <<detections.body.detect.routing.sid>>
+<br><b>Detection Link</b> - <<detections.body.link>>``
+
+- Make sure to also put the email address on the respective fields and put "Alerts" as the Sender name, and "Alert" for the Subject.
+
+- Now we need to add a page for our user prompt. To do this, head to Tools > Page > Drag & Drop. Change the name to User Prompt. Double click it and format it like this:<br><p align="center"><img src="images/user_prompt.png"></p><br>
+- Here's how the playbook should look:<br><p align="center"><img src="images/playbook_2.png"></p><br>
+- NOTE: Before proceeding, make sure to test the playbook, as you'll need information from the events in order to automate a response for them. Drag and drop two Trigger buttons. Name them as "Yes" and "No," or any other names you deem to be fit. Type from the following image onto one of the Triggers
 
 ## Conclusion
 
