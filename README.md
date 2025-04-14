@@ -137,5 +137,5 @@ Detection Link - <<detections.body.link>>``
 - NOTE: Before proceeding, make sure to test the playbook, as you'll need information from the events in order to automate a response for them. Drag and drop two Trigger buttons. Name them as "Yes" and "No," or any other names you deem to be fit. Type from the following image onto one of the Triggers
 
 ## Conclusion
-
+This project showcases the power of integrating SOAR and EDR platforms to build a modern, responsive cybersecurity pipeline. By leveraging LimaCharlie for detection and endpoint control, and Tines for orchestration and alerting, we’ve created an end-to-end solution that demonstrates key blue team capabilities: real-time threat detection using behavioral rules, automated alerting via Slack and email for rapid analyst awareness, custom decision workflows with interactive user prompts, and automated response actions, such as isolating compromised machines. 
 
