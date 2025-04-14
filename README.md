@@ -134,7 +134,7 @@ Detection Link - <<detections.body.link>>``
 
 - Now we need to add a page for our user prompt. To do this, head to Tools > Page > Drag & Drop. Change the name to User Prompt. Double click it and format it like this:<br><p align="center"><img src="images/user_prompt.png"></p><br>
 - Here's how the playbook should look:<br><p align="center"><img src="images/playbook_2.png"></p><br>
-- NOTE: Before proceeding, make sure to test the playbook, as you'll need information from the events in order to automate a response for them. Drag and drop two Trigger buttons. Name them as "Yes" and "No," or any other names you deem to be fit. Type from the following image onto one of the Triggers
+- Here's the final version of the playbook. This'll conclude the project.<br><p align="center"><img src="images/tines_final.png"></p><br>
 
 ## Conclusion
 This project showcases the power of integrating SOAR and EDR platforms to build a modern, responsive cybersecurity pipeline. By leveraging LimaCharlie for detection and endpoint control, and Tines for orchestration and alerting, we’ve created an end-to-end solution that demonstrates key blue team capabilities: real-time threat detection using behavioral rules, automated alerting via Slack and email for rapid analyst awareness, custom decision workflows with interactive user prompts, and automated response actions, such as isolating compromised machines. 
